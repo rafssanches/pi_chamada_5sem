@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfessorCalendarActivity"
+    android:id="@+id/activity_professorCalendar"
+    android:orientation="vertical"
+    android:background="@drawable/main_gradient"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/tittle_margin"
+        >
+
+        <TextView
+            android:id="@+id/professor_nomeTextView"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:paddingStart="@dimen/professor_tittle_paddingStart"
+            android:text="@string/professor_"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/tittle_textSize"
+            />
+
+        <Button
+            android:id="@+id/professor_voltarButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/voltar_button"
+            android:onClick="voltar"/>
+
+        <Button
+            android:id="@+id/professor_sairButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sair_button"
+            android:onClick="sair"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/activity_professor_nome"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimaryDark"
+        android:layout_gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/professor_matriculaTextView"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="start"
+            android:padding="@dimen/professorTextView_padding"
+            android:text="@string/professor_matricula_text"
+            android:textColor="@color/color_listaProfessor_header"
+            android:textSize="@dimen/professorTextView_textSize"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

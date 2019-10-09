@@ -1,0 +1,63 @@
+<resources>
+    //GERAL
+    <dimen name="tittle_margin">10dp</dimen>
+    <dimen name="tittle_textSize">20sp</dimen>
+    <dimen name="tittle_buttonTextSize">12sp</dimen>
+    <dimen name="sair_button">10dp</dimen>
+
+    // MAIN ACTIVITY
+    // logo (alianca_jedi.png)
+    <dimen name="logo_margin">15dp</dimen>
+    <dimen name="logo_marginBottom">5dp</dimen>
+    <dimen name="logo_padding">2dp</dimen>
+
+    // nome da aplicação
+    <dimen name="app_margin">2dp</dimen>
+    <dimen name="app_marginBottom">8dp</dimen>
+    <dimen name="app_textSize">18sp</dimen>
+
+    // EditText da main activity
+    <dimen name="main_editText_marginHorizontal">20dp</dimen>
+    <dimen name="main_editText_marginVertical">5dp</dimen>
+
+    // Buttons da main activity
+    <dimen name="main_button_marginHorizontal">20dp</dimen>
+    <dimen name="main_button_marginVertical">10dp</dimen>
+    <dimen name="main_buttonLogin_marginLeft">5dp</dimen>
+
+    // PROFESSOR ACTIVITY
+    // Tittle da professor activity
+    <dimen name="professor_tittle_margin">5dp</dimen>
+    <dimen name="professor_tittle_marginStart">30dp</dimen>
+    <dimen name="professor_tittle_paddingStart">10dp</dimen>
+
+    // Header da professor activity
+    <dimen name="professorTextView_padding">10dp</dimen>
+    <dimen name="professorTextView_textSize">16sp</dimen>
+
+    // PROFESSOR OPTION ACTIVITY
+
+    // QRCODE ACTIVITY
+    <dimen name="qrCode_margin">15dp</dimen>
+    <dimen name="qrCode_marginBottom">10dp</dimen>
+    <dimen name="qrCode_marginTop">40dp</dimen>
+    <dimen name="qrCode_padding">2dp</dimen>
+
+    // ALUNO ACTIVITY
+    <dimen name="aluno_buttons">10sp</dimen>
+
+    // Tittle do Aluno Activity
+    <dimen name="aluno_tittle_margin">10dp</dimen>
+    <dimen name="aluno_tittle_marginStart">30dp</dimen>
+    <dimen name="aluno_tittle_paddingStart">10dp</dimen>
+
+    // Header do Aluno Activity
+    <dimen name="aluno_header_margin">10dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+</resources>

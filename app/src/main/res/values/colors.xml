@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    // estilos
+    <color name="colorPrimary">#1DA1DB</color>
+    <color name="colorPrimaryDark">#0E336D</color>
+    <color name="colorAccent">#A5A5A5</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    // Professor Activity
+    <color name="color_listaProfessor_header">#FFFFFF</color>
+</resources>

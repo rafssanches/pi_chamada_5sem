@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AlunoCalendarActivity"
+    android:orientation="vertical"
+    android:background="@drawable/main_gradient"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/tittle_margin"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_margin="@dimen/tittle_margin"
+            android:paddingStart="@dimen/aluno_tittle_paddingStart"
+            android:text="@string/aluno_tittle"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/tittle_textSize"
+            />
+
+        <Button
+            android:id="@+id/voltarbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/sair_button"
+            android:text="@string/voltar_button"
+            android:onClick="voltar"/>
+
+        <Button
+            android:id="@+id/sairButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/sair_button"
+            android:text="@string/sair_button"
+            android:onClick="sair"/>
+
+    </LinearLayout>
+
+    <CalendarView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        />
+
+</LinearLayout>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/main_gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="186dp"
+            android:layout_height="115dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/logo_marginBottom"
+            android:layout_marginLeft="@dimen/logo_margin"
+            android:layout_marginRight="@dimen/logo_margin"
+            android:layout_marginTop="@dimen/logo_margin"
+            android:padding="@dimen/logo_padding"
+            app:srcCompat="@drawable/alianca_jedi" />
+
+        <TextView
+            android:id="@+id/appTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/app_margin"
+            android:layout_marginBottom="@dimen/app_marginBottom"
+            android:textSize="@dimen/app_textSize"
+            android:text="@string/app_brand" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
+
+        <EditText
+            android:id="@+id/userEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/main_editText_marginHorizontal"
+            android:layout_marginTop="@dimen/main_editText_marginVertical"
+            android:layout_marginRight="@dimen/main_editText_marginHorizontal"
+            android:layout_marginBottom="@dimen/main_editText_marginVertical"
+            android:ems="10"
+            android:hint="@string/user"
+            android:inputType="textPersonName"
+            android:background="@drawable/border_rounded"
+            />
+
+        <EditText
+            android:id="@+id/pswdEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:layout_marginLeft="@dimen/main_editText_marginHorizontal"
+            android:layout_marginRight="@dimen/main_editText_marginHorizontal"
+            android:layout_marginTop="@dimen/main_editText_marginVertical"
+            android:layout_marginBottom="@dimen/main_editText_marginVertical"
+            android:hint="@string/pswd"
+            android:background="@drawable/border_rounded"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginLeft="@dimen/main_editText_marginHorizontal"
+            android:layout_marginRight="@dimen/main_editText_marginHorizontal">
+
+            <Button
+                android:id="@+id/forgotPswdButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:backgroundTint="#00FFFFFF"
+                android:layout_marginTop="@dimen/main_button_marginVertical"
+                android:layout_marginBottom="@dimen/main_button_marginVertical"
+                android:layout_marginLeft="@dimen/main_button_marginHorizontal"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:text="@string/forgot_pswd" />
+
+            <Button
+                android:id="@+id/loginButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:onClick="validar"
+                android:layout_marginTop="@dimen/main_button_marginVertical"
+                android:layout_marginBottom="@dimen/main_button_marginVertical"
+                android:layout_marginLeft="@dimen/main_buttonLogin_marginLeft"
+                android:text="@string/login_button" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:text="@string/rede_social"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/facebookImage"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="@dimen/main_buttonLogin_marginLeft"
+                android:layout_marginTop="@dimen/main_button_marginVertical"
+                android:layout_marginBottom="@dimen/main_button_marginVertical"
+                android:clickable="true"
+                android:contentDescription="@string/logar_com_facebook"
+                android:contextClickable="true"
+                android:longClickable="true"
+                android:tooltipText="@string/logar_com_facebook"
+                android:padding="5dp"
+                app:srcCompat="@drawable/facebook_icon" />
+
+            <ImageView
+                android:id="@+id/twitterImage"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="@dimen/main_buttonLogin_marginLeft"
+                android:layout_marginTop="@dimen/main_button_marginVertical"
+                android:layout_marginBottom="@dimen/main_button_marginVertical"
+                android:clickable="true"
+                android:contentDescription="@string/logar_com_facebook"
+                android:contextClickable="true"
+                android:longClickable="true"
+                android:tooltipText="@string/logar_com_twitter"
+                android:padding="5dp"
+                app:srcCompat="@drawable/twitter_icon" />
+
+            <ImageView
+                android:id="@+id/instagramImage"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="@dimen/main_buttonLogin_marginLeft"
+                android:layout_marginTop="@dimen/main_button_marginVertical"
+                android:layout_marginBottom="@dimen/main_button_marginVertical"
+                android:clickable="true"
+                android:contentDescription="@string/logar_com_instagram"
+                android:contextClickable="true"
+                android:longClickable="true"
+                android:tooltipText="@string/logar_com_instagram"
+                android:padding="5dp"
+                app:srcCompat="@drawable/instagram_icon" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

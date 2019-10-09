@@ -1,0 +1,57 @@
+<resources>
+    <string name="sem_gps">Necessário a ativação do GPS</string>
+    <string name="sair_button">Sair</string>
+    <string name="voltar_button">Voltar</string>
+
+    // main activity
+    <string name="app_name">PI_chamada</string>
+    <string name="user">Digite seu RA ou Matrícula</string>
+    <string name="pswd">Digite sua senha</string>
+    <string name="login_button">Entrar</string>
+    <string name="forgot_pswd">esqueci minha senha</string>
+    <string name="app_brand">USJT Chamada</string>
+    <string name="logar_com_facebook">Acessar com o facebook</string>
+    <string name="logar_com_twitter">Acessar com o Twitter</string>
+    <string name="logar_com_instagram">Acessar com o Instagram</string>
+    <string name="rede_social">Acessar com redes sociais</string>
+
+    // professor activity
+    <string name="professor_tittle">Nome Professor</string>
+    <string name="geraQR_button">Gerar QR Code</string>
+    <string name="turma_text">Turmas</string>
+    <string name="alunos_text">Alunos</string>
+    <string name="professor_materias_text">Matérias</string>
+    <string name="opcoes_text">Opções</string>
+    <string name="professor_matricula_text">Matrícula do Professor</string>
+    <string name="professor_data_text">dd/MM/yyyy</string>
+    <string name="professor_lista_materia_button">Visualizar Matérias</string>
+    <string name="professor_lista_alunos_button">Visualizar Alunos</string>
+    <string name="professor_calendario_button">Mudar data</string>
+
+    // professor options activity
+
+    //aluno activity
+    <string name="aluno_tittle">Aluno</string>
+    <string name="aluno_presenca_button">PRESENÇA</string>
+    <string name="aluno_materia">Materia</string>
+    <string name="aluno_presencas">Presenças</string>
+    <string name="aluno_faltas">Faltas</string>
+    <string name="aluno_mostrar_button">Visualizar matérias</string>
+    <string name="aluno_calendar_button">Visualizar calendário</string>
+    <string name="title_activity_aluno2">Aluno2Activity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+
+
+</resources>
