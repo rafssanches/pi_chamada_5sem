@@ -26,14 +26,15 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int REQUEST_CODE_GPS_PERMISSION = 1001;
 
-    EditText et_user, et_pswd;
-    Button btn_login, btn_forgot_pswd;
+    private EditText et_user, et_pswd;
+    private Button btn_login, btn_forgot_pswd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btn_login = (Button) findViewById(R.id.loginButton);
+        btn_forgot_pswd = findViewById(R.id.forgotPswdButton);
 
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         locationListener = new LocationListener() {
@@ -100,6 +101,14 @@ public class MainActivity extends AppCompatActivity {
         locationManager.removeUpdates(locationListener);
     }
 
+    public Usuario checaLogin (String usuario, String senha) {
+        if (usuario.equals("professor") && senha.equals("123"))
+            return new Usuario(usuario, senha, true);
+        if (usuario.equals("aluno") && senha.equals("123"))
+            return new Usuario(usuario, senha, false);
+        return null;
+    }
+
 
     // será chamado ao clicar em Entrar
     public void validar (View view) {
@@ -108,7 +117,8 @@ public class MainActivity extends AppCompatActivity {
         String user = et_user.getText().toString();
         String pswd = et_pswd.getText().toString();
 
-        Usuario usuario = new Usuario(user, pswd, true);
+        Usuario usuario = checaLogin(user, pswd);
+        //Usuario usuario = new Usuario(user, pswd, true);
         //Usuario usuario = new Usuario(user, pswd, false);
         //Usuario usuario = null;
 
@@ -127,6 +137,5 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent2);
             Toast.makeText(this, "Aluno reconhecido", Toast.LENGTH_SHORT).show();
         }
-        System.out.println("user: " + user + "\npswd: " + pswd);
     }
 }

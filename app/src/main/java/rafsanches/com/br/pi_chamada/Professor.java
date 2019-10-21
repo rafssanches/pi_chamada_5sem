@@ -5,10 +5,14 @@ import java.util.List;
 public class Professor {
     private String nome;
     private String matricula;
-    private List<Materia> materias;
-    private List<Aluno> alunos;
 
-    // Construtores
+    public Professor(String nome, String matricula){
+        setNome(nome);
+        setMatricula(matricula);
+    }
+
+    // gets and setters
+
     public String getNome() {
         return nome;
     }
@@ -25,19 +29,4 @@ public class Professor {
         this.matricula = matricula;
     }
 
-    public List<Materia> getMaterias() {
-        return materias;
-    }
-
-    public void setMaterias(List<Materia> materias) {
-        this.materias = materias;
-    }
-
-    public List<Aluno> getAlunos() {
-        return alunos;
-    }
-
-    public void setAlunos(List<Aluno> alunos) {
-        this.alunos = alunos;
-    }
 }
