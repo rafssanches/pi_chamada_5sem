@@ -5,11 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfessorCalendarActivity"
-    android:id="@+id/activity_professorCalendar"
+    tools:context="rafsanches.com.br.pi_chamada.ProfessorListaMateriasActivity"
+    android:id="@+id/activity_professor_lista_materias"
     android:orientation="vertical"
-    android:background="@drawable/main_gradient"
-    >
+    android:background="@drawable/main_gradient">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -52,16 +51,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/activity_professor_nome"
-        android:orientation="horizontal"
-        android:background="@color/white"
-        android:layout_gravity="center"
+        android:background="#FFFFFF"
+        android:padding="10dp"
         android:layout_margin="10dp"
         >
 
-        <CalendarView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/livrosRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            tools:context=".ProfessorActivity"
+            tools:showIn="@layout/activity_professor"
             />
 
     </LinearLayout>

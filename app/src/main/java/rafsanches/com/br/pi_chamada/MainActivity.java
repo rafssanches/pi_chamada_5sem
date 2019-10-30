@@ -3,11 +3,13 @@ package rafsanches.com.br.pi_chamada;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Camera;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private LocationListener locationListener;
 
     private static final int REQUEST_CODE_GPS_PERMISSION = 1001;
+//    private static final int REQUEST_CODE_CAMERA_PERMISSION = 1002;
 
     private EditText et_user, et_pswd;
     private Button btn_login, btn_forgot_pswd;
@@ -33,8 +36,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btn_login = (Button) findViewById(R.id.loginButton);
+        btn_login = findViewById(R.id.loginButton);
         btn_forgot_pswd = findViewById(R.id.forgotPswdButton);
+        et_user = findViewById(R.id.userEditText);
+        et_pswd = findViewById(R.id.pswdEditText);
 
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         locationListener = new LocationListener() {
@@ -65,8 +70,8 @@ public class MainActivity extends AppCompatActivity {
         if (ActivityCompat.checkSelfPermission(this,
                 Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             //somente ativa
-            //a localização é obtida via hardware, intervalo de 0 segundos e 0 metros entre atualização
-            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
+            //a localização é obtida via hardware, intervalo de X segundos e X metros entre atualização
+            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 10, 10, locationListener);
         }
         else {
             //permissão ainda não foi dada, solicite ao usuário
@@ -85,12 +90,13 @@ public class MainActivity extends AppCompatActivity {
                 if (ActivityCompat.checkSelfPermission(this,
                         Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED){
                     locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,
-                            0, 0, locationListener);
+                            10, 10, locationListener);
                 }
             }
             else {
                 //usuário negou, não ativar GPS
                 Toast.makeText(this, getString(R.string.sem_gps), Toast.LENGTH_SHORT).show();
+                finish();
             }
         }
     }
@@ -112,30 +118,29 @@ public class MainActivity extends AppCompatActivity {
 
     // será chamado ao clicar em Entrar
     public void validar (View view) {
-        et_user = (EditText) findViewById(R.id.userEditText);
-        et_pswd = (EditText) findViewById(R.id.pswdEditText);
         String user = et_user.getText().toString();
         String pswd = et_pswd.getText().toString();
 
         Usuario usuario = checaLogin(user, pswd);
-        //Usuario usuario = new Usuario(user, pswd, true);
-        //Usuario usuario = new Usuario(user, pswd, false);
-        //Usuario usuario = null;
 
         if (usuario == null){
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
-            Toast.makeText(this, "Usuário ou senha inválido", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.usuario_desconhecido), Toast.LENGTH_SHORT).show();
         }
         else if (usuario.isProfessor()){
+            String professorNome = "Nome do Professor";
+            String professorMatricula = "Matricula";
             Intent intent = new Intent(this, ProfessorActivity.class);
+            intent.putExtra("professor_nome", professorNome);
+            intent.putExtra("professor_matricula", professorMatricula);
             startActivity(intent);
-            Toast.makeText(this, "Professor reconhecido", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.usuario_professor), Toast.LENGTH_SHORT).show();
         }
         else {
             Intent intent2 = new Intent(this, AlunoActivity.class);
             startActivity(intent2);
-            Toast.makeText(this, "Aluno reconhecido", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.usuario_aluno), Toast.LENGTH_SHORT).show();
         }
     }
 }

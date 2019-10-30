@@ -1,13 +1,23 @@
 package rafsanches.com.br.pi_chamada;
 
+import androidx.annotation.NonNull;
+
 import java.util.List;
 
 public class Aluno {
     private String nome;
     private String ra;
-    private List<Materia> materias;
 
-    // contrutores
+    public Aluno(@NonNull String ra, @NonNull String nome) {
+        setRa(ra);
+        setNome(nome);
+    }
+
+    public Aluno () {
+
+    }
+
+    // getters setters
     public String getNome() {
         return nome;
     }
@@ -22,13 +32,5 @@ public class Aluno {
 
     public void setRa(String ra) {
         this.ra = ra;
-    }
-
-    public List<Materia> getMaterias() {
-        return materias;
-    }
-
-    public void setMaterias(List<Materia> materias) {
-        this.materias = materias;
     }
 }

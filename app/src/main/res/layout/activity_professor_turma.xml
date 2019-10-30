@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:gravity="start"
             android:paddingStart="@dimen/professor_tittle_paddingStart"
-            android:text="@string/professor_tittle"
+            android:hint="Nome Professor"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="@dimen/tittle_textSize"

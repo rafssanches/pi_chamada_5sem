@@ -1,7 +1,12 @@
 <resources>
     <string name="sem_gps">Necessário a ativação do GPS</string>
+    <string name="sem_camera">Necessário o uso da câmera</string>
+    <string name="inicio_button">Inicio</string>
     <string name="sair_button">Sair</string>
     <string name="voltar_button">Voltar</string>
+    <string name="usuario_desconhecido">Usuário ou senha inválido</string>
+    <string name="usuario_aluno">Aluno reconhecido</string>
+    <string name="usuario_professor">Professor reconhecido</string>
 
     // main activity
     <string name="app_name">PI_chamada</string>
@@ -16,7 +21,6 @@
     <string name="rede_social">Acessar com redes sociais</string>
 
     // professor activity
-    <string name="professor_tittle">Nome Professor</string>
     <string name="geraQR_button">Gerar QR Code</string>
     <string name="turma_text">Turmas</string>
     <string name="alunos_text">Alunos</string>
@@ -52,6 +56,7 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
+    <string name="title_activity_professor_lista_materias">ProfessorListaMateriasActivity</string>
 
 
 </resources>

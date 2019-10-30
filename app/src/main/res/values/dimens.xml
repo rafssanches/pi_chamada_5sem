@@ -35,6 +35,9 @@
     <dimen name="professorTextView_padding">10dp</dimen>
     <dimen name="professorTextView_textSize">16sp</dimen>
 
+    // Lista da professor activity
+    <dimen name="materia_icon_width">24dp</dimen>
+
     // PROFESSOR OPTION ACTIVITY
 
     // QRCODE ACTIVITY

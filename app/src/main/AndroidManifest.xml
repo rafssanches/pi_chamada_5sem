@@ -13,8 +13,13 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ProfessorCalendarActivity"></activity>
-        <activity android:name=".ListaMateriasActivity"></activity>
+        <activity android:name=".ProfessorMateriaActivity"></activity>
+        <activity
+            android:name=".ProfessorListaMateriasActivity"
+            android:label="@string/title_activity_professor_lista_materias"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ProfessorCalendarActivity" />
+        <activity android:name=".ListaMateriasActivity" />
         <activity android:name=".AlunoCalendarActivity" />
         <activity android:name=".AlunoMateriasActivity" />
         <activity android:name=".ProfessorQRCodeActivity" />

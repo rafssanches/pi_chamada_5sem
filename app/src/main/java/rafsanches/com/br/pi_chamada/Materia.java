@@ -1,18 +1,32 @@
 package rafsanches.com.br.pi_chamada;
 
 import java.io.Serializable;
+import java.util.Date;
+import java.util.List;
 
 public class Materia implements Serializable{
 
     private String nome;
-    private Turma turma;
-    private Aluno aluno;
     private String sala;
-    private Integer faltas;
-    private Integer presenca;
+    private Professor professor;
+    private String turma;
+    private String qtdeAluno;
+//    private List<Aluno> alunos;
+    private Date date;
 
-    //Construtores
+    // construtores
+    public Materia (String nome, String sala, /*List<Aluno> alunos*/ String qtdeAluno, String turma) {
+        setNome(nome);
+        setSala(sala);
+        setQtdeAluno(qtdeAluno);
+//        setAlunos(alunos);
+        setTurma(turma);
+    }
+
+    //getters and setters
+
     public String getNome() {
+
         return nome;
     }
 
@@ -20,23 +34,8 @@ public class Materia implements Serializable{
         this.nome = nome;
     }
 
-    public Turma getTurma() {
-        return turma;
-    }
-
-    public void setTurma(Turma turma) {
-        this.turma = turma;
-    }
-
-    public Aluno getAluno() {
-        return aluno;
-    }
-
-    public void setAluno(Aluno Aluno) {
-        this.aluno = Aluno;
-    }
-
     public String getSala() {
+
         return sala;
     }
 
@@ -44,21 +43,51 @@ public class Materia implements Serializable{
         this.sala = sala;
     }
 
-    public Integer getFaltas() {
-        return faltas;
+    public Professor getProfessor() {
+
+        return professor;
     }
 
-    public void setFaltas(Integer faltas) {
-        this.faltas = faltas;
+    public void setProfessor(Professor professor) {
+
+        this.professor = professor;
     }
 
-    public Integer getPresenca() {
-        return presenca;
+    public String getTurma() {
+        return turma;
     }
 
-    public void setPresenca(Integer presenca) {
-        this.presenca = presenca;
+    public void setTurma(String turma) {
+        this.turma = turma;
     }
+
+//    public List<Aluno> getAlunos() {
+//        return alunos;
+//    }
+//
+//    public void setAlunos(List<Aluno> alunos) {
+//        this.alunos = alunos;
+//    }
+
+    public Date getDate() {
+
+        return date;
+    }
+
+    public void setDate(Date date) {
+
+        this.date = date;
+    }
+
+    public String getQtdeAluno() {
+        return qtdeAluno;
+    }
+
+    public void setQtdeAluno(String qtdeAluno) {
+        this.qtdeAluno = qtdeAluno;
+    }
+
+    // construtores
 
     /*
     @NonNull
